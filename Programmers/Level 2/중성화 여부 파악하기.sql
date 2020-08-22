@@ -1,0 +1,1 @@
+select animal_id, name, if(sex_upon_intake like '%Neutered%' || sex_upon_intake like '%Spayed%','O','X') as '중성화' from animal_ins order by animal_id;
