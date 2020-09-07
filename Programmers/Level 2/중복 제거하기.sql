@@ -1,1 +1,1 @@
-SELECT count(distinct name) from animal_ins; 
+SELECT COUNT(DISTINCT NAME) AS 'count' FROM ANIMAL_INS;
