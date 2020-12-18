@@ -1,1 +1,1 @@
-select animal_id, name from animal_outs where animal_id not in(select animal_id from animal_ins) order by animal_id;
+SELECT o.ANIMAL_ID AS ANIMAL_ID, o.NAME AS NAME FROM ANIMAL_INS i RIGHT JOIN ANIMAL_OUTS o ON i.animal_id = o.animal_id WHERE i.animal_id IS null ORDER BY o.ANIMAL_ID;
