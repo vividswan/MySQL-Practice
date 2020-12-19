@@ -1,1 +1,1 @@
-select animal_ins.animal_id, animal_ins.name from animal_ins, animal_outs where animal_ins.animal_id = animal_outs.animal_id && animal_ins.datetime > animal_outs.datetime order by animal_ins.datetime asc;
+SELECT i.ANIMAL_ID AS ANIMAL_ID, i.NAME AS NAME FROM ANIMAL_INS i JOIN ANIMAL_OUTS o ON i.ANIMAL_ID = o.ANIMAL_ID WHERE i.DATETIME > o.DATETIME ORDER BY i.DATETIME;
