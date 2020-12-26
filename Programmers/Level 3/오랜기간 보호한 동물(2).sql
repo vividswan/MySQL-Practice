@@ -1,1 +1,1 @@
-SELECT animal_outs.animal_id, animal_outs.name from animal_outs left join animal_ins on animal_outs.animal_id = animal_ins.animal_id order by (animal_outs.datetime - animal_ins.datetime) desc limit 2;
+SELECT i.ANIMAL_ID as ANIMAL_ID, i.NAME as NAME from ANIMAL_INS i join ANIMAL_OUTS o ON i.ANIMAL_ID = o.ANIMAL_ID ORDER BY o.DATETIME - i.DATETIME DESC LIMIT 2;
