@@ -1,1 +1,1 @@
-select animal_outs.ANIMAL_ID, animal_outs.ANIMAL_TYPE, animal_outs.NAME from animal_outs left join animal_ins on animal_outs.animal_id = animal_ins.animal_id where animal_ins.sex_upon_intake like 'intact%' and (animal_outs.sex_upon_outcome like 'Neutered%' or animal_outs.sex_upon_outcome like 'Spayed%')
+SELECT a.ANIMAL_ID, a.ANIMAL_TYPE, a.NAME FROM (SELECT * FROM ANIMAL_INS WHERE SEX_UPON_INTAKE LIKE 'Intact%') as a, (SELECT * FROM ANIMAL_OUTS WHERE SEX_UPON_OUTCOME NOT LIKE 'Intact%') as b WHERE a.ANIMAL_ID = b.ANIMAL_ID ORDER BY a.ANIMAL_ID;
