@@ -1,1 +1,4 @@
-SELECT hour(datetime) as HOUR, count(animal_id) as COUNT from animal_outs where hour(datetime) >= 9 and hour(datetime) <= 19 group by hour(datetime) order by hour(datetime);
+SELECT HOUR(DATETIME) AS 'HOUR', COUNT(*) as 'COUNT' 
+FROM ANIMAL_OUTS WHERE HOUR(DATETIME) >= 9 AND HOUR(DATETIME) <= 19 
+GROUP BY HOUR(DATETIME) 
+ORDER BY HOUR(DATETIME);
